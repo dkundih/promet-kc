@@ -18,7 +18,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-let locIcon = L.icon({
+let biciklIkona = L.icon({
     iconUrl: "ikone/vlak.png",
     iconSize:     [38, 50], // size of the icon
     iconAnchor:   [20, 30], // point of the icon which will correspond to marker's location
@@ -28,7 +28,7 @@ var mjesta = ["LENIŠĆE", "CERINE", "KAMPUS", "ŽELJEZNIČKI KOLODVOR", "GROBLJ
 
 //initial show
 for (let i of mjesta) {
-    var j = await L.marker([m_bicikli_podaci[i]['X'], m_bicikli_podaci[i]['Y']], {icon: locIcon}).addTo(map)
+    var j = await L.marker([m_bicikli_podaci[i]['X'], m_bicikli_podaci[i]['Y']], {icon: biciklIkona}).addTo(map)
     j.bindPopup(
         `
         <H4>${i}</H4>
