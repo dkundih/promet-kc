@@ -67,4 +67,4 @@ async function prikazMBicikala() {
     }
 }
 
-setInterval(prikazMBicikala, 15000)
+setInterval(prikazMBicikala, 5000)
