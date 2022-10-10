@@ -1,3 +1,18 @@
+//data
+const api = "https://raw.githubusercontent.com/dkundih/promet-kc/master/geopodaci/T_vlak/T_vlak.json"
+
+async function create(arg) {
+    const response = await fetch(api)
+    const data = await response.json()
+    return data[arg]
+}
+
+var bregi = await create("BREGI")
+var bregix = bregi['X']
+var bregiy = bregi['Y']
+
+//map
+
 const map = L.map('map').setView([45.8, 16], 12);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -11,7 +26,7 @@ let locIcon = L.icon({
     iconAnchor:   [20, 30], // point of the icon which will correspond to marker's location
 })
 
-var markers = [L.marker([45.82, 16], {icon: locIcon}).addTo(map), L.marker([45.81, 16.14], {icon: locIcon}).addTo(map)]
+var markers = [L.marker([bregix, bregiy], {icon: locIcon}).addTo(map), L.marker([45.81, 16.14], {icon: locIcon}).addTo(map)]
 
 function showTime() {
     var time = new Date();
