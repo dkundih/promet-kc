@@ -6,7 +6,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 let locIcon = L.icon({
-    iconUrl: "https://raw.githubusercontent.com/dkundih/dkundih-busko/master/ikone/vlak.png",
+    iconUrl: "ikone/vlak.png",
     iconSize:     [38, 50], // size of the icon
     iconAnchor:   [20, 30], // point of the icon which will correspond to marker's location
 })
@@ -29,7 +29,7 @@ function popup() {
         <H1>ZG</H1>
         <p> ${showTime()} je sati ustani.</p>
         <p>Hi</p>
-        <img src = "https://media-exp1.licdn.com/dms/image/C4D16AQHpOsJkmupuZg/profile-displaybackgroundimage-shrink_350_1400/0/1636792791248?e=1671062400&v=beta&t=PTNuKJYQF-krZudZFeQiOXVpU-M3iPulvMDBfUG6MMg" height = 80px width = 200px</img>
+        <img src = "slike/vlak.jpg" height = 80px width = 200px</img>
         `
         ).openPopup();
         }
@@ -39,7 +39,7 @@ function popup() {
                 <H1>ZG</H1>
                 <p> ${showTime()} je sati ustani.</p>
                 <p>Hi</p>
-                <img src = "https://media-exp1.licdn.com/dms/image/C4D16AQHpOsJkmupuZg/profile-displaybackgroundimage-shrink_350_1400/0/1636792791248?e=1671062400&v=beta&t=PTNuKJYQF-krZudZFeQiOXVpU-M3iPulvMDBfUG6MMg" height = 80px width = 200px</img>
+                <img src = "slike/vlak.jpg" height = 80px width = 200px</img>
                 `
                 )
         }
