@@ -39,7 +39,20 @@ for (let i of mjesta) {
     )
 }
 
-// update every 10 sec
+// initial load
+for (let i of mjesta) {
+    var j = await L.marker([m_bicikli_podaci[i]['X'], m_bicikli_podaci[i]['Y']], {icon: locIcon}).addTo(map)
+    j.bindPopup(
+        `
+        <H4>${i}</H4>
+        <p>Sada je ${showTime()}.</p>
+        <p>Ovdje se nalazi postolje mehaničkih <b>Bicko</b> bicikala.</p>
+        <img src = "slike/bicikli.jpg" height = 150px width = 300px</img>
+        `
+    )
+}
+
+// update every 15 sec
 async function prikazMBicikala() {
     for (let i of mjesta) {
         var j = await L.marker([m_bicikli_podaci[i]['X'], m_bicikli_podaci[i]['Y']], {icon: locIcon}).addTo(map)
@@ -54,13 +67,4 @@ async function prikazMBicikala() {
     }
 }
 
-async function initAndStall(func, initial = true, amount = 10000) {
-    if (initial) {
-        await func()
-        initial = false
-    } else {
-        setInterval(func, amount)
-    }
-}
-
-initAndStall(prikazMBicikala)
+setInterval(prikazMBicikala, 15000)
