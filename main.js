@@ -26,6 +26,20 @@ let locIcon = L.icon({
 
 var mjesta = ["LENIŠĆE", "CERINE", "KAMPUS", "ŽELJEZNIČKI KOLODVOR", "GROBLJE", "ZRINSKI TRG", "DOM MLADIH"]
 
+//initial show
+for (let i of mjesta) {
+    var j = await L.marker([m_bicikli_podaci[i]['X'], m_bicikli_podaci[i]['Y']], {icon: locIcon}).addTo(map)
+    j.bindPopup(
+        `
+        <H4>${i}</H4>
+        <p>Sada je ${showTime()}.</p>
+        <p>Ovdje se nalazi postolje mehaničkih <b>Bicko</b> bicikala.</p>
+        <img src = "slike/bicikli.jpg" height = 150px width = 300px</img>
+        `
+    )
+}
+
+// update every 10 sec
 async function prikazMBicikala() {
     for (let i of mjesta) {
         var j = await L.marker([m_bicikli_podaci[i]['X'], m_bicikli_podaci[i]['Y']], {icon: locIcon}).addTo(map)
@@ -40,4 +54,4 @@ async function prikazMBicikala() {
     }
 }
 
-setInterval(prikazMBicikala, 1000)
+setInterval(prikazMBicikala, 10000)
