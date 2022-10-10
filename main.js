@@ -54,4 +54,13 @@ async function prikazMBicikala() {
     }
 }
 
-setInterval(prikazMBicikala, 10000)
+async function initAndStall(func, initial = true, amount = 10000) {
+    if (initial) {
+        await func()
+        initial = false
+    } else {
+        setInterval(func, amount)
+    }
+}
+
+initAndStall(prikazMBicikala)
