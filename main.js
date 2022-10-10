@@ -52,7 +52,7 @@ for (let i of mjesta) {
     )
 }
 
-// update every 15 sec
+// update every 10 sec
 async function prikazMBicikala() {
     for (let i of mjesta) {
         var j = await L.marker([m_bicikli_podaci[i]['X'], m_bicikli_podaci[i]['Y']], {icon: locIcon}).addTo(map)
@@ -67,4 +67,4 @@ async function prikazMBicikala() {
     }
 }
 
-setInterval(prikazMBicikala, 5000)
+setInterval(prikazMBicikala, 10000)
