@@ -19,7 +19,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 let biciklIkona = L.icon({
-    iconUrl: "ikone/vlak.png",
+    iconUrl: "ikone/bicikl.png",
     iconSize:     [38, 50], // size of the icon
     iconAnchor:   [20, 30], // point of the icon which will correspond to marker's location
 })
