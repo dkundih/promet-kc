@@ -3,7 +3,7 @@
 Real-time public transport in Koprivnica application. Covering bicycle, bus and train terminals and routes.
 </p>
 
-**Application: **
+**Application:**
 <a href="https://www.promet-kc.netlify.app"> here</a>
 
 <img src = 'https://raw.githubusercontent.com/dkundih/promet-kc/master/_logistics/app.jpg'>
