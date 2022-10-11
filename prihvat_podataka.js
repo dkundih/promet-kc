@@ -25,7 +25,6 @@ export var vlak_podaci = await kreiraj(vlak_api)
 export var bus_podaci = await kreiraj(bus_api)
 
 // pohrana, indeksiranje i izvoz linija kao varijable
-
 export var vlak_podaci_CK_KC = await kreiraj(vlak_api_CK_KC)
 export var vlak_podaci_ZG_KC = await kreiraj(vlak_api_ZG_KC)
 export var vlak_podaci_VT_KC = await kreiraj(vlak_api_VT_KC)
