@@ -107,7 +107,7 @@ async function kontinuiraniPrikaz(funkcija, iznos) {
 }
 
 // __main__.py alike
-kontinuiraniPrikaz(prikazMBicikala, 30000)
-kontinuiraniPrikaz(prikazEBicikala, 30000)
+prikazMBicikala()
+prikazEBicikala()
 kontinuiraniPrikaz(prikazBusa, 10000)
 kontinuiraniPrikaz(prikazVlaka, 10000)
