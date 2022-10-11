@@ -8,19 +8,29 @@
     crossorigin=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROMET-KC</title>
-
+    <link rel = "stylesheet" href = "stiliziranje\stil.css">
     <style>
         #map {
-             height: 900px;
+             height: 750px;
              width: 100%;
          }
     </style>
 </head>
 <body>
-    <div id="map"></div>
-    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
-    integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
-    crossorigin=""></script>
-    <script type = "module" src="main.js"></script>
+    <div class="Flexbox">
+        <div class = "Flexbox-item-1">
+            <H1 class = "Naslov">ODRŽIVA MOBILNOST U KOPRIVNICI</H1>
+        <div class = "Flexbox-item-2">
+            <div id = "map">
+                <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+                integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+                crossorigin=""></script>
+                <script type = "module" src="main.js"></script>
+                </div>
+        </div>
+        <div class = "Flexbox-item-3">
+            <H1 class = "Footer">(c) David Kundih, 2022.</H1>
+        </div>
+    <div>
 </body>
 </html>
