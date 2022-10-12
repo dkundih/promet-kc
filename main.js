@@ -1,7 +1,9 @@
 // unos
-import { m_bicikli_podaci, e_bicikli_podaci, vlak_podaci, bus_podaci } from "./prihvat_podataka.js"
+import { m_bicikli_podaci, e_bicikli_podaci, vlak_podaci, bus_podaci, server_api } from "./prihvat_podataka.js"
 import { vlak_podaci_CK_KC, vlak_podaci_ZG_KC, vlak_podaci_VT_KC, vlak_podaci_BT_KC, bus_podaci_L1 } from "./prihvat_podataka.js"
 import { stil_vlak, stil_bus } from "./stilovi_linija.js"
+
+console.log(server_api)
 
 // vrijeme
 function showTime() {

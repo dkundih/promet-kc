@@ -10,7 +10,7 @@ const vlak_api_ZG_KC = "https://raw.githubusercontent.com/dkundih/api/master/pro
 const vlak_api_VT_KC = "https://raw.githubusercontent.com/dkundih/api/master/promet-kc/vlak/%C5%BD_VT-KC.json"
 const vlak_api_BT_KC = "https://raw.githubusercontent.com/dkundih/api/master/promet-kc/vlak/%C5%BD_BT-KC.json"
 const bus_api_L1 = "https://raw.githubusercontent.com/dkundih/api/master/promet-kc/bus/B_B_L1.json"
-const moj_api = "https://cors-anywhere.herokuapp.com/https://dkundih-api.herokuapp.com/"
+const moj_api = "https://dkundih-api.herokuapp.com/"
 
 // dohvaćanje podataka
 async function kreiraj(api) {
@@ -31,3 +31,4 @@ export var vlak_podaci_ZG_KC = await kreiraj(vlak_api_ZG_KC)
 export var vlak_podaci_VT_KC = await kreiraj(vlak_api_VT_KC)
 export var vlak_podaci_BT_KC = await kreiraj(vlak_api_BT_KC)
 export var bus_podaci_L1 = await kreiraj(bus_api_L1)
+export var server_api = await kreiraj(moj_api)
