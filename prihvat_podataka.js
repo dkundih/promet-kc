@@ -32,3 +32,12 @@ export var vlak_podaci_VT_KC = await kreiraj(vlak_api_VT_KC)
 export var vlak_podaci_BT_KC = await kreiraj(vlak_api_BT_KC)
 export var bus_podaci_L1 = await kreiraj(bus_api_L1)
 export var server_api = await kreiraj(moj_api)
+
+export async function inter() {
+setInterval(async () => {
+    var data = await kreiraj(moj_api)
+    console.log(data["Vrijeme"])
+    return await data["Vrijeme"]
+}, 15000)
+}
+
