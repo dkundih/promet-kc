@@ -33,11 +33,18 @@ export var vlak_podaci_BT_KC = await kreiraj(vlak_api_BT_KC)
 export var bus_podaci_L1 = await kreiraj(bus_api_L1)
 export var server_api = await kreiraj(moj_api)
 
-export async function inter() {
+// dohvaćanje u realnom vremenu i pokretanje pripadajuće funkcije s intervalom
+export async function dohvati(funkc, argument, interval) {
 setInterval(async () => {
-    var data = await kreiraj(moj_api)
-    console.log(data["Vrijeme"])
-    return await data["Vrijeme"]
-}, 15000)
+    let realni_podaci = await kreiraj(moj_api)
+    console.log(realni_podaci[argument])
+    await funkc(realni_podaci[argument])
+}, interval)
 }
 
+// prvo dohvaćanje podataka i pokretanje pripadajuće funkcije
+export async function učitaj(funkc, argument) {
+        let realni_podaci = await kreiraj(moj_api)
+        console.log(realni_podaci[argument])
+        await funkc(realni_podaci[argument])
+    }

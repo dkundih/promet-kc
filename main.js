@@ -1,9 +1,7 @@
 // unos
-import { m_bicikli_podaci, e_bicikli_podaci, vlak_podaci, bus_podaci, inter} from "./prihvat_podataka.js"
+import { m_bicikli_podaci, e_bicikli_podaci, vlak_podaci, bus_podaci, učitaj, dohvati} from "./prihvat_podataka.js"
 import { vlak_podaci_CK_KC, vlak_podaci_ZG_KC, vlak_podaci_VT_KC, vlak_podaci_BT_KC, bus_podaci_L1 } from "./prihvat_podataka.js"
 import { stil_vlak, stil_bus } from "./stilovi_linija.js"
-
-inter()
 
 // vrijeme
 function showTime() {
@@ -82,14 +80,14 @@ async function prikazBicikala(vrsta) {
 }
 
 // funkcija za prikaz terminala autobusa  POTREBNO U JSONU PRIDRUŽITI LINK SLIKE LOKACIJI I IZMJENITI bindPopup opis!!!
-async function prikazBusa() {
+async function prikazBusa(termin) {
     for (let i of bus_mjesta) {
         var j = await L.marker([bus_podaci[i]['X'], bus_podaci[i]['Y']], {icon: busIkona}).addTo(karta)
         j.bindPopup(
             `
             <H3>${i}</H3>
             <p><i>Busko stajalište autobusa.</i></p>
-            <p>Sada je ${showTime()}.</p>
+            <p>Sada je ${termin}.</p>
             <img src = ${bus_podaci[i]["FOTOGRAFIJA"]} height = 160px width = 300px</img>
             `
         )
@@ -97,14 +95,14 @@ async function prikazBusa() {
 }
 
 // funkcija za prikaz terminala autobusa  POTREBNO U JSONU PRIDRUŽITI LINK SLIKE LOKACIJI I IZMJENITI bindPopup opis!!!
-async function prikazVlaka() {
+async function prikazVlaka(termin) {
     for (let i of vlak_mjesta) {
         var j = await L.marker([vlak_podaci[i]['X'], vlak_podaci[i]['Y']], {icon: vlakIkona}).addTo(karta)
         j.bindPopup(
             `
             <H3>${i}</H3>
             <p><i>HŽ željeznički kolodvor.</i></p>
-            <p>Sada je ${showTime()}.</p>
+            <p>Sada je ${termin}.</p>
             <img src = ${vlak_podaci[i]["FOTOGRAFIJA"]} height = 130px width = 300px</img>
             `
         )
@@ -117,13 +115,9 @@ async function prikazLinije(koordinate, stil) {
     return await linija
 }
 
-// inicijalizacija i kontinuirano ažuriranje funkcije
-async function kontinuiraniPrikaz(funkcija, iznos) {
-    await funkcija()
-    setInterval(funkcija, iznos)
-}
-
 // __main__.py alike
+
+// inicijalna pokretanja karte i podataka s GitHub API poslužitelja
 prikazBicikala("mehanički")
 prikazBicikala("električni")
 prikazLinije(vlak_podaci_CK_KC, stil_vlak)
@@ -131,5 +125,11 @@ prikazLinije(vlak_podaci_ZG_KC, stil_vlak)
 prikazLinije(vlak_podaci_VT_KC, stil_vlak)
 prikazLinije(vlak_podaci_BT_KC, stil_vlak)
 prikazLinije(bus_podaci_L1, stil_bus)
-kontinuiraniPrikaz(prikazBusa, 30000)
-kontinuiraniPrikaz(prikazVlaka, 30000)
+
+// inicijalno učitavanje podataka s vlastitog API poslužitelja
+učitaj(prikazBusa, "Vrijeme")
+učitaj(prikazVlaka, "Vrijeme")
+
+// kontinuirano dohvaćanje podataka s vlastitog API poslužitelja prema zadanog intervalu
+dohvati(prikazBusa, "Vrijeme", 15000)
+dohvati(prikazVlaka, "Vrijeme", 15000)
