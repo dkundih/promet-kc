@@ -87,7 +87,7 @@ async function prikazBusa(termin) {
             `
             <H3>${i}</H3>
             <p><i>Busko stajalište autobusa.</i></p>
-            <p>Sada je ${termin}.</p>
+            <p>Ažurirano: ${termin}.</p>
             <img src = ${bus_podaci[i]["FOTOGRAFIJA"]} height = 160px width = 300px</img>
             `
         )
@@ -102,7 +102,7 @@ async function prikazVlaka(termin) {
             `
             <H3>${i}</H3>
             <p><i>HŽ željeznički kolodvor.</i></p>
-            <p>Sada je ${termin}.</p>
+            <p>Ažurirano: ${termin}.</p>
             <img src = ${vlak_podaci[i]["FOTOGRAFIJA"]} height = 130px width = 300px</img>
             `
         )
