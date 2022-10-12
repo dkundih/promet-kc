@@ -1,5 +1,5 @@
 // unos
-import { m_bicikli_podaci, e_bicikli_podaci, vlak_podaci, bus_podaci, vrijeme } from "./prihvat_podataka.js"
+import { m_bicikli_podaci, e_bicikli_podaci, vlak_podaci, bus_podaci } from "./prihvat_podataka.js"
 import { vlak_podaci_CK_KC, vlak_podaci_ZG_KC, vlak_podaci_VT_KC, vlak_podaci_BT_KC, bus_podaci_L1 } from "./prihvat_podataka.js"
 import { stil_vlak, stil_bus } from "./stilovi_linija.js"
 
@@ -38,7 +38,6 @@ const m_bicikli_mjesta = ["LENIŠĆE", "CERINE", "KAMPUS", "ŽELJEZNIČKI KOLODV
 const e_bicikli_mjesta = ["SVEUČILIŠTE SJEVER"]
 const bus_mjesta = ["AUTOBUSNI KOLODVOR", "TRG MLADOSTI", "BOLNICA", "STADION", "KAMPUS"]
 const vlak_mjesta = ['KC-VŽ', 'KC-BT', 'KC-VT', 'KC-ZG', 'KUNOVEC-SUBOTICA', 'DRNJE', 'BREGI', 'MUČNA REKA']
-
 
 // rječnik bicikala
 let Mehanički = {
@@ -109,8 +108,6 @@ async function prikazVlaka() {
         )
     }
 }
-
-console.log(vrijeme)
 
 // prikaz linija na karti
 async function prikazLinije(koordinate, stil) {
