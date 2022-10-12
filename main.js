@@ -3,6 +3,8 @@ import { m_bicikli_podaci, e_bicikli_podaci, vlak_podaci, bus_podaci, inter} fro
 import { vlak_podaci_CK_KC, vlak_podaci_ZG_KC, vlak_podaci_VT_KC, vlak_podaci_BT_KC, bus_podaci_L1 } from "./prihvat_podataka.js"
 import { stil_vlak, stil_bus } from "./stilovi_linija.js"
 
+inter()
+
 // vrijeme
 function showTime() {
     var vrijeme = new Date();
