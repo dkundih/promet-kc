@@ -6,6 +6,9 @@ Real-time public transport in Koprivnica application. Covering bicycle, bus and 
 **API:**
 <a href="https://github.com/dkundih/api"> here</a>
 
+**LOCATION DATA PROCESSING**
+<a href="https://github.com/dkundih/dkundih-busko"> here</a>
+
 <img src = 'https://raw.githubusercontent.com/dkundih/promet-kc/master/_logistics/app.jpg'>
 
 **A word from the author!**
