@@ -4,7 +4,7 @@ Real-time public transport in Koprivnica application. Covering bicycle, bus and 
 </p>
 
 **API:**
-<a href="[https://www.promet-kc.netlify.app](https://github.com/dkundih/api)"> here</a>
+<a href="[https://github.com/dkundih/api]"> here</a>
 
 <img src = 'https://raw.githubusercontent.com/dkundih/promet-kc/master/_logistics/app.jpg'>
 
