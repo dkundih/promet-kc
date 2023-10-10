@@ -1,16 +1,16 @@
 <h1>PROMET-KC APP</h1>
 <p>
-Real-time public transport in Koprivnica application. Covering bicycle, bus and train terminals and routes.
+Real-time public transport in Koprivnica application. Covering bicycle, bus and train terminals and routes. Now archived.
 </p>
 
-**Application:**
-<a href="https://www.promet-kc.netlify.app"> here</a>
+**API:**
+<a href="[https://www.promet-kc.netlify.app](https://github.com/dkundih/api)"> here</a>
 
 <img src = 'https://raw.githubusercontent.com/dkundih/promet-kc/master/_logistics/app.jpg'>
 
 **A word from the author!**
 
-The library itself, it's maintenance, updates and stability, logo, videos, promotional materials and everything associated with duality are done by **David Kundih** from **Croatia**.
+The application itself, it's maintenance, updates and stability, logo, videos, promotional materials and everything associated with duality are done by **David Kundih** from **Croatia**.
 
 <h1 align='center'> Hi! :wave:</h1>
  
